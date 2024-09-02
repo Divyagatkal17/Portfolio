@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Digital Portfolio</title>
+<link rel="stylesheet" type="text/css" href="divyaportfolio.css" />
+<link rel="stylesheet" href="portfolio.css" />
+<style>
+/* Add styles for navigation and sections */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-color: #93cedd;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+header h2.logo {
+  margin: 0;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header ul li {
+  margin: 0 10px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header .btn {
+  background-color: #555;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+main {
+  padding: 20px;
+  
+}
+img{
+    margin-left: 40%;
+}
+
+section {
+  display: none;
+  
+}
+
+section.active {
+  display: block;
+}
+
+/* Projects Section Styles */
+#projects {
+  padding: 4em 2em;
+  background-color: #fff;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+}
+
+.project {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project h3 {
+  margin: 1em;
+  font-size: 1.5rem;
+}
+
+.project p {
+  margin: 0 1em 1em;
+  font-size: 1rem;
+  color: #555;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  margin-right: 10px;
+}
+
+.social img {
+  vertical-align: middle;
+}
+
+.end {
+  text-align: center;
+  padding: 20px;
+}
+
+/* About Me Section Styles */
+
+
+.about-container:hover {
+  transform: translateY(-5px);
+}
+
+.about-container h1 {
+  color: #3a3a3a;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #5c67f2;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.about-container h2 {
+  color: #5c67f2;
+  font-size: 1.75rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-container p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.about-container ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.about-container ul li {
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.about-container ul li:hover {
+  background-color: #5c67f2;
+  color: white;
+}
+
+.about-container a {
+  color: #5c67f2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.about-container a:hover {
+  color: #4751c2;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-container h1 {
+    font-size: 2rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-container p,
+  .about-container ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* contact me styel*/
+.contact-container h1 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-container p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c67f2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #4751c2;
+}
+
+</style>
+</head>
+<body>
+<div class="hero">
+<header>
+  <h2 class="logo">Portfo<span>lio</span></h2>
+  <ul>
+    <li><a href="#" onclick="showSection('home')">Home</a></li>
+    <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+    <li><a href="#" onclick="showSection('about')">About Me</a></li>
+  </ul>
+  <a href="#" onclick="showSection('contact')" class="btn">Contact Me</a>
+</header>
+<main>
+  <section id="home" class="active">
+    <div class="content">
+      <h4>Hello, my name is</h4>
+      <h1>Divya <span>Gatkal</span></h1>
+      <h3>
+        I'm currently studying Computer Engineering <br />
+        at MIT Academy of Engineering.
+      </h3>
+    </div>
+    <div class="main">
+      <img src="divya4.png" alt="MyPic" width="350px" />
+    </div>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/divya-gatkal-3242ba257">
+        <img src="Linkedin.png" alt="Linkedin" width="50px" />
+      </a>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="grid">
+      <!-- Project 1 -->
+      <div class="project">
+        <img src="https://www.hiwonder.com/cdn/shop/products/6391ace427ade714b70fb966024ae804_6090506d-c109-453f-9283-ebd4644a0d4e.jpg?v=1673313867%201200w" alt="Project 1">
+        <h3>Project 1: AI-Powered Robot</h3>
+        <p>Designed and built an AI-powered robot using Python and TensorFlow.</p>
+      </div>
+      <!-- Project 2 -->
+      <div class="project">
+        <img src="https://thumbs.dreamstime.com/b/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-100232725.jpg" alt="Project 2">
+        <h3>Project 2: Web Development</h3>
+        <p>Built a responsive website using HTML, CSS, and JavaScript.</p>
+      </div>
+      <!-- Add more projects here -->
+    </div>
+  </section>
+  <section id="about">
+    <div class="about-container">
+        <h1>About Me</h1>
+        <p>I'm a Divya Gatkal B.Tech student specializing in Computer Engineering, with a strong passion for building innovative projects and solving complex problems. My academic journey has provided me with a solid foundation in various programming languages and technologies, and I’m actively involved in both coursework and extracurricular projects.</p>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Database mangaement:Mongodb</li>
+            <li>Development Frameworks: React Native</li>
+            <li>Programming Languages: Python, Java, C++ </li>
+            <li>Operating Systems: Windows, Linux</li>
+        </ul>
+
+        <h2>Education</h2>
+        <p><strong>10th Grade Percentage:</strong> 91.20%</p>
+        <p><strong>12th Grade Percentage:</strong> 86%</p>
+
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Reading books</li>
+            <li>Dancing</li>
+            <li>Eager learn new technology</li>
+        </ul>
+  </section>
+  <section id="contact">
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out to me by filling the form below:</p>
+        <form action="#" method="post" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</main>
+</div>
+<script>
+function showSection(sectionId) {
+  // Hide all sections
+  document.querySelectorAll('main section').forEach(section => {
+    section.classList.remove('active');
+  });
+
+  // Show the clicked section
+  document.getElementById(sectionId).classList.add('active');
+}
+</script>
+</body>
+</html>
